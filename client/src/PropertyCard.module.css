@@ -1,0 +1,82 @@
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 15px;
+}
+
+.header h3 {
+  margin: 0;
+}
+
+.card p {
+  margin: 5px 15px;
+  color: #555;
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  align-items: center;
+}
+
+.info span {
+  display: flex;
+  align-items: center;
+}
+
+.info img {
+  margin-left: 5px;
+}
+
+.likeContainer {
+  margin-right: 10px;
+}
+
+.likeButton {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.2s;
+}
+
+.likeButton:hover {
+  transform: scale(1.2);
+}
+
+.interestButton {
+  background-color: #ff5a5f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.interestButton:hover {
+  background-color: #e04e50;
+}

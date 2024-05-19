@@ -1,0 +1,65 @@
+.dashboard {
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header nav a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: #333;
+}
+
+.filterBar {
+  margin: 20px 0;
+}
+
+.filterBar button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.properties {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.pagination li {
+  margin: 0 5px;
+}
+
+.pagination a {
+  text-decoration: none;
+  padding: 10px 15px;
+  color: #007bff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination a:hover {
+  background-color: #f1f1f1;
+}
+
+.active a {
+  background-color: #007bff;
+  color: white;
+  border: 1px solid #007bff;
+}
