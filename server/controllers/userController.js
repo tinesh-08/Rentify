@@ -6,7 +6,7 @@ const generateToken = (id) => {
 };
 
 const registerUser = async (req, res) => {
-  const { firstName, lastName, email, password, phone } = req.body;
+  const { firstName, lastName, email, password, phone, role } = req.body;
 
   try {
     const userExists = await User.findOne({ email });
@@ -21,6 +21,7 @@ const registerUser = async (req, res) => {
       email,
       password,
       phone,
+      role,  // Include role
     });
 
     res.status(201).json({
@@ -29,12 +30,14 @@ const registerUser = async (req, res) => {
       lastName: user.lastName,
       email: user.email,
       phone: user.phone,
+      role: user.role,  // Return role
       token: generateToken(user._id),
     });
   } catch (error) {
     res.status(400).json({ message: 'Error occurred' });
   }
 };
+
 
 const authUser = async (req, res) => {
   const { email, password } = req.body;
@@ -49,6 +52,7 @@ const authUser = async (req, res) => {
         lastName: user.lastName,
         email: user.email,
         phone: user.phone,
+        role: user.role,  // Return role
         token: generateToken(user._id),
       });
     } else {
@@ -58,5 +62,6 @@ const authUser = async (req, res) => {
     res.status(400).json({ message: 'Error occurred' });
   }
 };
+
 
 module.exports = { registerUser, authUser };

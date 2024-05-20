@@ -18,6 +18,7 @@ const initialProperties = [
     beds: 1,
     baths: 1,
     price: 2000,
+    likes:304,
     seller: {
       name: "John Doe",
       contact: "johndoe@example.com",
@@ -33,6 +34,7 @@ const initialProperties = [
     beds: 1,
     baths: 1,
     price: 2600,
+    likes:256,
     seller: {
       name: "Jane Smith",
       contact: "janesmith@example.com",
@@ -48,6 +50,7 @@ const initialProperties = [
     beds: 2,
     baths: 3,
     price: 5000,
+    likes:423,
     seller: {
       name: "Alice Johnson",
       contact: "alicejohnson@example.com",

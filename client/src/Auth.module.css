@@ -42,3 +42,18 @@
   .form button:hover {
     background-color: #0056b3;
   }
+
+  .roleSelection {
+    display: flex;
+    gap: 50px;
+  }
+  
+  .roleSelection label {
+    display: flex;
+    align-items: center;
+  }
+  
+  .roleSelection input[type="checkbox"] {
+    margin-left: 10px;
+  }
+  
