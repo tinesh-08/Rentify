@@ -14,7 +14,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post('http://localhost:5000/api/users/register', {
+      const { data } = await axios.post('https://rentify-bim5.onrender.com/api/users/register', {
         firstName,
         lastName,
         email,

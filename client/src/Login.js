@@ -21,7 +21,7 @@ const Login = () => {
       return;
     }
     try {
-      const { data } = await axios.post('http://localhost:5000/api/users/login', { email, password });
+      const { data } = await axios.post('https://rentify-bim5.onrender.com/api/users/login', { email, password });
       localStorage.setItem('userInfo', JSON.stringify({ ...data, role }));
       if (role === 'buyer') {
         navigate('/');
