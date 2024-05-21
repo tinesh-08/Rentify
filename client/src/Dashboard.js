@@ -11,8 +11,6 @@ const Dashboard = ({ properties }) => {
   const [selectedProperty, setSelectedProperty] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
-  const propertiesPerPage = 4;
-  const totalProperties = properties.length;
   const navigate = useNavigate();
   const userInfo = JSON.parse(localStorage.getItem('userInfo'));
   const userRole = userInfo?.role;
