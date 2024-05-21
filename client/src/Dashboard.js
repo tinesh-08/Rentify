@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import PropertyCard from './PropertyCard';
 import SellerModal from './SellerModal';
@@ -13,7 +13,6 @@ const Dashboard = ({ properties }) => {
   const [currentPage, setCurrentPage] = useState(0);
   const propertiesPerPage = 4;
   const totalProperties = properties.length;
-  const totalPages = Math.ceil(totalProperties / propertiesPerPage);
   const navigate = useNavigate();
   const userInfo = JSON.parse(localStorage.getItem('userInfo'));
   const userRole = userInfo?.role;

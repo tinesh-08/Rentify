@@ -12,7 +12,6 @@ const CreateProperty = ({ addProperty }) => {
   const [sellerName, setSellerName] = useState('');
   const [sellerContact, setSellerContact] = useState('');
   const [sellerPhone, setSellerPhone] = useState('');
-  const [image, setImage] = useState(null);
   const [imagePreview, setImagePreview] = useState('');
 
   const navigate = useNavigate();
