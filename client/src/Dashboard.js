@@ -38,6 +38,11 @@ const Dashboard = ({ properties }) => {
     setCurrentPage(selected);
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem('userInfo');
+    navigate('/login');
+  };
+
   const offset = currentPage * ITEMS_PER_PAGE;
   const currentItems = properties.slice(offset, offset + ITEMS_PER_PAGE);
 
@@ -48,7 +53,11 @@ const Dashboard = ({ properties }) => {
         <nav>
           <Link to="/">Home</Link>
           {userRole === 'seller' && <Link to="/create-property">Create Property</Link>}
-          <Link to="/login">Logout</Link>
+          {userInfo ? (
+            <button onClick={handleLogout}>Logout</button>
+          ) : (
+            <Link to="/login">Login</Link>
+          )}
         </nav>
       </header>
       <div className={styles.properties}>
