@@ -54,7 +54,7 @@ const Dashboard = ({ properties }) => {
           <Link to="/">Home</Link>
           {userRole === 'seller' && <Link to="/create-property">Create Property</Link>}
           {userInfo ? (
-            <button onClick={handleLogout}>Logout</button>
+            <button className='button-16' onClick={handleLogout}>Logout</button>
           ) : (
             <Link to="/login">Login</Link>
           )}
